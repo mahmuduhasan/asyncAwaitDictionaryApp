@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+#wordio {
+  display: flex;
+  justify-content: space-between;
+}
+
+#play-button {
+  background-color: white;
+  border: none;
+}
+
+.hide {
+  display: none;
+}
