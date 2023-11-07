@@ -17,7 +17,6 @@ const getWord = async (e) => {
 
 const showData = (status, data) => {
   if (status === 200) {
-    phonetic.classList.remove("hide");
     playBtn.classList.remove("hide");
     audio = data[0].phonetics[0].audio;
     if (data[0].phonetic === undefined) {
@@ -26,11 +25,9 @@ const showData = (status, data) => {
       phonetic.textContent = data[0].phonetic;
     }
   } else {
-    phonetic.classList.add("hide");
+    // phonetic.classList.add("hide");
     playBtn.classList.add("hide");
-    document.getElementById(
-      "wordio"
-    ).innerHTML = `<h4>${status} : Not Found!</h4>`;
+    phonetic.innerText = `${status} : Not Found!`;
   }
 };
 
